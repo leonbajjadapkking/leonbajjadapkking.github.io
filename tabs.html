@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+        integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+
+    <script>
+        $(function () {
+
+            $("#Tab1").click(function () {
+                $('#container1').show()
+                $('#container2').hide()
+                $('#container3').hide()
+            });
+
+
+            $("#Tab2").click(function () {
+                $('#container2').show()
+                $('#container1').hide()
+                $('#container3').hide()
+            });
+
+            $("#Tab3").click(function () {
+                $('#container3').show()
+                $('#container1').hide()
+                $('#container2').hide()
+            });
+        });
+
+       
+
+    </script>
+
+    <style>
+        .tab {
+            color: white;
+            background-color: gray;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding: 20px;
+            border-radius: 5px;
+            margin-right: 15px;
+            text-decoration: none;
+
+        }
+
+        .container {
+            color: black;
+            background-color: gray;
+            padding-top: 10px;
+            width: 350px;
+            height: 400px;
+
+
+        }
+
+        #container2 {
+            display: none;
+        }
+
+        #container3 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="tab" id="Tab1" href="#">Tab 1</a>
+    <a class="tab" id="Tab2" href="#">Tab 2</a>
+    <a class="tab" id="Tab3" href="#">Tab 3</a>
+
+    <div id="container1" class="container">Contents of tab1....</div>
+    <div id="container2" class="container">Contents of tab2....</div>
+    <div id="container3" class="container">Contets of tab3....</div>
+
+
+</body>
+
+</html>
